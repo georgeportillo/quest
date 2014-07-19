@@ -56,9 +56,9 @@
                         </div><!--/col-md-4-->
 
                       <div class="col-md-4 profile-text">
-                        <h3><% include username.ejs %> <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></h3>
+                        <h3><% include username.ejs %> <a href="/profile-edit"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a></h3>
                         <h6>12th Grade Student</h6>
-                        <p>No one has yet realized the wealth of sympathy, the kindness and generosity tucked away within the soul. The effort of every true education should be to unlock that treasure.</p>
+                        <p><% if(locals.profile.user_profile_description) { %><%= profile.user_profile_description %><% } %></p>
                         <br>
                       </div><!--/col-md-4 -->
                   

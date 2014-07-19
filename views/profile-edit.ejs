@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <link rel="shortcut icon" href="http://alvarez.is/demo/dashio/favicon.png">
+  <title>Quest - Community Learning</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+  <!--external css-->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/zabuto_calendar.css">
+  <link rel="stylesheet" type="text/css" href="/javascripts/gritter/css/jquery.gritter.css" />
+  <!-- Custom styles for this template -->
+  <link href="/stylesheets/style.css" rel="stylesheet">
+  <link href="/stylesheets/style-responsive.css" rel="stylesheet">
+  <script src="/javascripts/chart-master/Chart.js"></script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <% include topbar.ejs %>
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <% include sidebar.ejs %>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+          <section class="wrapper">
+            <div class="row">
+              <div class="col-lg-9 main-chart">
+                <div class="row content-panel">
+                  <ul class="nav nav-tabs nav-justified">
+                    <li> <a data-toggle="tab" href="#overview">Dashboard</a>
+                    </li>
+                    <li class="active"> <a data-toggle="tab" href="#overview">Timeline</a>
+                    </li>
+                    <li> <a data-toggle="tab" href="#photos" class="photos">Photos & Videos</a>
+                    </li>
+                    <li> <a data-toggle="tab" href="/edit-profile">Edit Profile</a>
+                    </li>
+                  </ul>
+                  <!-- Profile Panel 2 -->
+                  <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                    <div class="content-panel2 pn">
+                      <div id="spotify">
+                        <div class="col-xs-4 col-xs-offset-8"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/col-md-4-->
+                  <div class="col-md-4 profile-text">
+                    <h3>
+                   <% include username.ejs %>
+                 </h3>
+                   
+                    <h6>12th Grade Student OR Teacher</h6>
+                    <textarea id="user_profile_description" class="form-control" cols="30" rows="10"><% if(locals.profile.user_profile_description) { %><%= profile.user_profile_description %><% } %></textarea>
+                    <br>
+                    <button id="user_profile_submit" class="btn">Submit</button>
+                    <br>
+
+                  </div>
+                  <!--/col-md-4 -->
+                  <div class="col-md-4 profile-text mt mb centered">
+                    <div class="hidden-sm hidden-xs">
+                      <h4>0</h4>
+                      <h6>.  FOLLOWERS</h6>
+                      <h4>0</h4>
+                      <h6>.  FOLLOWING</h6>
+                      <h4>0</h4>
+                      <h6>.  GROUPS</h6>
+                    </div>
+                  </div>
+                  <!--/col-md-4 -->
+                </div>
+                <!-- /row -->
+                <div class="row mt"></div>
+                <!-- /row -->
+                <div class="row">
+                  <!-- Create a post card -->
+                  <div class="row mt">
+                    <!-- Input Fields-->
+                    <div class="col-lg-12 mb">
+                      <div class="form-panel">
+                        <form action="#" class="form-horizontal style-form">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <textarea rows="1" class="form-control" placeholder="What's on your mind?"></textarea>
+                              <div class="defult-style">
+                                <br>
+                                <div class="pull-left">
+                                  <button class="btn btn-theme"><i class="fa fa-smile-o"></i>
+                                  </button>
+                                  <button class="btn btn-theme"><i class="fa fa-twitter"></i>
+                                  </button>
+                                  <button class="btn btn-theme"><i class="fa fa-camera"></i>
+                                  </button>
+                                  <button class="btn btn-theme"><i class="fa fa-youtube-play"></i>
+                                  </button>
+                                </div>
+                                <div class="pull-right">
+                                  <button class="btn btn-theme">POST</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- /form-panel -->
+                    </div>
+                    <!-- /col-lg-12 -->
+                  </div>
+                  <!-- /row -->
+                  <!-- Column 1 -->
+                  <!-- SHARED -->
+                  <div class="col-md-4 mb">
+                    <div class="instagram-panel pn">
+                      <iframe width="100%" height="250" scrolling="no" frameborder="no" src="//www.youtube.com/embed/eIZTMVNBjc4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <!-- /col-md-4 -->
+                  <!-- End Column 1 -->
+                  <!-- TWITTER PANEL -->
+                  <div class="col-md-4 mb">
+                    <div class="twitter-panel pn"> <i class="fa fa-twitter fa-4x"></i>
+                      <p>Our new school mascot is here! Take a look at these hilarious pictures!</p>
+                      <p class="user">@LadyWoodHighschool</p>
+                      <p>December 10, 2014</p>
+                    </div>
+                  </div>
+                  <!-- /col-md-4 -->
+                  <!-- SHARED -->
+                  <div class="col-md-4 mb">
+                    <div class="instagram-panel pn">
+                      <iframe width="100%" height="250" scrolling="no" frameborder="no" src="//www.youtube.com/embed/lKcZ551Ex4w" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <!-- /col-md-4 -->
+                  <!-- End Column 1 -->
+                  <!-- Column 2 -->
+                  <!-- PHOTO PANEL -->
+                  <div class="col-md-4 mb">
+                    <div class="instagram-panel pn"> <i class="fa fa-camera fa-4x"></i>
+                      <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+                      <p>December 08, 2014</p>
+                      <button class="btn btn-small btn-theme04">View Photo</button>
+                    </div>
+                  </div>
+                  <!-- /col-md-4 -->
+                  <!-- MESSAGE -->
+                  <div class="col-md-4 mb">
+                    <div class="content-panel pn">
+                      <div id="blog-bg">
+                        <!--
+                                    div class="badge badge-popular">POPULAR</div
+                                  -->
+                        <div class="blog-title">Title Goes Here</div>
+                      </div>
+                      <div class="blog-text">
+                        <p>Lorem Ipsum is simply dummy text for a post that a teacher might post. <a href="#">Read More</a>
+                          <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /col-md-4-->
+                  <!-- TWITTER PANEL -->
+                  <div class="col-md-4 mb">
+                    <div class="twitter-panel pn"> <i class="fa fa-twitter fa-4x"></i>
+                      <p>I tweeted this thing about some thing and people read it! #whocares</p>
+                      <p class="user">@LadyWoodHighschool</p>
+                      <p>December 06, 2014</p>
+                    </div>
+                  </div>
+                  <!-- /col-md-4 -->
+                  <!-- End Column 2 -->
+                </div>
+                <!-- /row -->
+              </div>
+              <!-- /col-lg-9 END SECTION MIDDLE -->
+              <% include rightbar.ejs %>
+            </div>
+            <!--/row -->
+          </section>
+        </section>
+        <!--main content end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/jquery-1.8.3.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="/javascripts/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="/javascripts/jquery.scrollTo.min.js"></script>
+  <script src="/javascripts/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="/javascripts/jquery.sparkline.js"></script>
+  <!--common script for all pages-->
+  <script src="/javascripts/common-scripts.js"></script>
+  <script type="text/javascript" src="/javascripts/gritter/js/jquery.gritter.js"></script>
+  <script type="text/javascript" src="/javascripts/gritter-conf.js"></script>
+  <!--script for this page-->
+  <script src="/javascripts/sparkline-chart.js"></script>
+  <script src="/javascripts/zabuto_calendar.js"></script>
+  <script type="application/javascript">
+  $(document).ready(function () {
+
+    $("#user_profile_submit").on("click", function() {
+
+      var user_profile_grade = $("#user_profile_grade").val();
+      var user_profile_description = $("#user_profile_description").val();
+
+      jQuery.ajax({
+          dataType: "json",
+          url: "/save_profile_data", 
+          type: "POST",
+          data: {user_profile_grade: user_profile_grade, user_profile_description: user_profile_description},
+          success: function(data) {
+              $("#user_profile_submit").html(data.response).addClass("btn-success");
+          }
+      });  
+    });
+
+    $("#date-popover").popover({
+      html: true,
+      trigger: "manual"
+    });
+    $("#date-popover").hide();
+    $("#date-popover").click(function (e) {
+      $(this).hide();
+    });
+    $("#my-calendar").zabuto_calendar({
+      action: function () {
+        return myDateFunction(this.id, false);
+      },
+      action_nav: function () {
+        return myNavFunction(this.id);
+      },
+      ajax: {
+        url: "show_data.php?action=1",
+        modal: true
+      },
+      legend: [{
+        type: "text",
+        label: "Special event",
+        badge: "00"
+      }, {
+        type: "block",
+        label: "Regular event",
+      }]
+    });
+  });
+
+  function myNavFunction(id) {
+    $("#date-popover").hide();
+    var nav = $("#" + id).data("navigation");
+    var to = $("#" + id).data("to");
+    console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+  }
+  </script>
+</body>
+
+</html>

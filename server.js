@@ -11,20 +11,20 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
 
-var AWS = require('aws-sdk');
-var path = require('path');
-var multiparty = require('multiparty');
-var im = require('imagemagick');
-var fs = require('fs');
+var AWS          = require('aws-sdk');
+var path         = require('path');
+var multiparty   = require('multiparty');
+var im           = require('imagemagick');
+var fs           = require('fs');
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-var app      = express();
+var app          = express();
 
-var configDB = require('./config/database.js');
+var configDB     = require('./config/database.js');
 
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database

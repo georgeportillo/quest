@@ -2,6 +2,7 @@ module.exports = function(app, passport) {
 
     var User = require('../app/models/user');
     var User_profile = require('../app/models/profile');
+    var Lesson = require('../app/models/lessons');
     var mongoose = require('mongoose');
 
 // normal routes ===============================================================
@@ -11,8 +12,27 @@ module.exports = function(app, passport) {
 		res.render('login.ejs', { message: req.flash('loginMessage') });
 	});
 
-	app.get('/profile-student', isLoggedIn, function(req, res) {
-		res.render('profile-student.ejs', { message: req.flash('loginMessage') });
+	app.get('/create-class', function(req, res) {
+		res.render('login.ejs', { message: req.flash('loginMessage') });
+	});
+
+	app.get('/profile-edit', isLoggedIn, function(req, res) {
+		id = req.user._id;
+	    var response = {
+    		profile: {}
+    	};
+
+        User_profile.collection.findOne({'user_uni': id}, function(err, data) {
+        	var response = {
+        		profile: {}
+        	};
+        	response.user = req.user;
+        	if (data != null && err == null) {
+        		response.profile["user_profile_grade"] = data.user_profile_grade;
+        		response.profile["user_profile_description"] = data.user_profile_description;
+        	};
+        	res.render('profile-edit', response);		
+        });
 	});
 
 	// PROFILE SECTION =========================
@@ -52,6 +72,8 @@ module.exports = function(app, passport) {
 			};
 		});
 	});
+
+
 	// process the login form
 	app.post('/login-accumulate', isLoggedIn, function(req, res) {
 		var id = req.user._id;
