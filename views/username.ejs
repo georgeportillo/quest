@@ -1,0 +1,9 @@
+<% if (user.local.email) { %>
+		<%= user.local.first_name %> <%= user.local.last_name %>
+<% } else if (user.facebook.token) { %>
+		<%= user.facebook.name %>
+<% } else if (user.twitter.token) { %>
+		<%= user.twitter.first_name %> <%= user.twitter.last_name %>
+<% } else if (user.google.token) { %>
+		<%= user.google.name %>
+<% } %>

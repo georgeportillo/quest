@@ -1,0 +1,99 @@
+      <!-- **********************************************************************************************************************************************************
+      RIGHT SIDEBAR CONTENT
+      *********************************************************************************************************************************************************** -->                  
+
+      <div class="col-lg-3 ds">
+        <!--COMPLETED ACTIONS DONUTS CHART-->
+        <div class="donut-main">
+          <h4>COMPLETED LESSONS</h4>
+          <canvas id="newchart" height="130" width="130"></canvas>
+          <script>
+           var doughnutData = [
+           {
+            value: 70,
+            color:"#4ECDC4"
+          },
+          {
+            value : 30,
+            color : "#fdfdfd"
+          }
+          ];
+          var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
+        </script>
+      </div>
+
+      <!--NEW EARNING STATS -->
+      <div class="panel terques-chart">
+        <div class="panel-body">
+          <div class="chart">
+            <div class="centered">
+              <span>LESSON PROGRESS:</span>
+              <strong>70% COMPLETE</strong>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!--new earning end-->
+
+      <!-- RECENT ACTIVITIES SECTION -->
+      <h4 class="centered mt">LESSONS TO BE COMPLETED</h4>
+      <!-- First Activity -->
+      <div class="desc">
+        <div class="thumb">
+          <img class="img-circle" src="/images/Lessons_halfsize_02.jpg" width="55px" height="55px" align="">
+        </div>
+        <div class="details">
+          <p><muted>Due: Today</muted><br/>
+           <a href="#">Test</a> Science Exam 203 Name<br/>
+         </p>
+       </div>
+     </div>
+     <!-- Second Activity -->
+     <div class="desc">
+      <div class="thumb">
+        <img class="img-circle" src="/images/Lessons_halfsize_01.jpg" width="55px" height="55px" align="">
+      </div>
+      <div class="details">
+        <p><muted>Due: Tomorrow</muted><br/>
+         <a href="#">Assignments</a> English Research Paper Name<br/>
+       </p>
+     </div>
+   </div>
+   <!-- Third Activity -->
+   <div class="desc">
+    <div class="thumb">
+      <img class="img-circle" src="/images/Lessons_halfsize_01.jpg" width="55px" height="55px" align="">
+    </div>
+    <div class="details">
+      <p><muted>Due: Tomorrow</muted><br/>
+       <a href="#">Assignment</a> Math Homework Name<br/>
+     </p>
+   </div>
+ </div>
+ <!-- Fourth Activity -->
+ <div class="desc">
+  <div class="thumb">
+    <img class="img-circle" src="/images/Lessons_halfsize_03.jpg" width="55px" height="55px" align="">
+  </div>
+  <div class="details">
+    <p><muted>Due: In 4 Days</muted><br/>
+     <a href="#">Quiz</a> How Much Does A Snowflake Know Name<br/>
+   </p>
+ </div>
+</div>
+
+<!-- CALENDAR-->
+<div id="calendar" class="mb">
+  <div class="panel green-panel no-margin">
+    <div class="panel-body">
+      <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+        <div class="arrow"></div>
+        <h3 class="popover-title" style="disadding: none;"></h3>
+        <div id="date-popover-content" class="popover-content"></div>
+      </div>
+      <div id="my-calendar"></div>
+    </div>
+  </div>
+</div><!-- / calendar -->
+</div><!-- /col-lg-3 -->

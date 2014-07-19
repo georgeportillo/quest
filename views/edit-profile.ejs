@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="http://alvarez.is/demo/dashio/favicon.png">
+
+    <title>Quest - Community Learning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="/javascripts/gritter/css/jquery.gritter.css" />
+    
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/style-responsive.css" rel="stylesheet">
+
+    <script src="/javascripts/chart-master/Chart.js"></script>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="/" class="logo"><b>QUEST<span>IO</span></b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="/profile">
+                            <i class="fa fa-check-square"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">4 NEW LESSON GRADES</p>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <div class="task-info">
+                                        <div class="desc">History Lesson Name</div>
+                                        <div class="percent">92%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 92%">
+                                            <span class="sr-only">92% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <div class="task-info">
+                                        <div class="desc">Math Homework Name</div>
+                                        <div class="percent">60%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <div class="task-info">
+                                        <div class="desc">English Paper Name</div>
+                                        <div class="percent">80%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <div class="task-info">
+                                        <div class="desc">Science Research Paper Name</div>
+                                        <div class="percent">70%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">70% Complete (Important)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#">See All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- settings end -->
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="/profile">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">5 NEW MESSAGES</p>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Assignment Name.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                    <!-- notification dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="/profile">
+                            <i class="fa fa-stack-exchange"></i>
+                            <span class="badge bg-warning">12</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-yellow"></div>
+                            <li>
+                                <p class="yellow">12 NEW NOTIFACATIONS</p>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Posted A Photo
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                         Shared A Song
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Posted An Assignment
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                         Commented On A Photo
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">See all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- notification dropdown end -->
+                    <!-- Page Views dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="/profile">
+                            <i class="fa fa-eye"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">5 NEW PAGE VIEWS</p>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Pageviews dropdown end -->
+                    <!-- Calendar dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="/profile">
+                            <i class="fa fa-calendar"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">5 CALENDAR NOTIFACATIONS</p>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/Lessons_halfsize_02.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Test</span>
+                                    <span class="time">Due: Today</span>
+                                    </span>
+                                    <span class="message">
+                                        Science Exam 203 Name
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/Lessons_halfsize_01.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Assignment</span>
+                                    <span class="time">Due: Tomorrow</span>
+                                    </span>
+                                    <span class="message">
+                                     English Research paper Name
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/Lessons_halfsize_01.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Assignemnt</span>
+                                    <span class="time">Due: Tomorrow</span>
+                                    </span>
+                                    <span class="message">
+                                        Math Homework Name
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">
+                                    <span class="photo"><img alt="avatar" src="/images/Lessons_halfsize_03.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Quiz</span>
+                                    <span class="time">Due: In 4 Days</span>
+                                    </span>
+                                    <span class="message">
+                                        How Much Does A Snowflake...
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Calendar dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      	<% include sidebar.ejs %>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+     
+      <section id="main-content">
+          <section class="wrapper">
+              <div class="row">
+                  <div class="col-lg-9 main-chart">
+                    <div class="row content-panel">
+                      
+                      <ul class="nav nav-tabs nav-justified">
+                                    
+                                    <li>
+                                        <a data-toggle="tab" href="#overview">Dashboard</a>
+                                    </li>
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#overview">Timeline</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#photos" class="photos">Photos & Videos</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="/edit-profile">Edit Profile</a>
+                                    </li>
+                        </ul>
+
+                      <!-- Profile Panel 2 -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                            <div class="content-panel2 pn">
+                                <div id="spotify">
+                                    <div class="col-xs-4 col-xs-offset-8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/col-md-4-->
+
+                      <div class="col-md-4 profile-text">
+                        <h3>
+		                 <% include username.ejs %>
+						</h3>
+                        <h6>12th Grade Student</h6>
+                        <p>No one has yet realized the wealth of sympathy, the kindness and generosity tucked away within the soul. The effort of every true education should be to unlock that treasure.</p>
+                        <br>
+                      </div><!--/col-md-4 -->
+                  
+                      <div class="col-md-4 profile-text mt mb centered">
+                        <div class="hidden-sm hidden-xs">
+                          <h4>777</h4>
+                          <h6>.  FOLLOWERS</h6>
+                          <h4>777</h4>
+                          <h6>.  FOLLOWING</h6>
+                          <h4>777</h4>
+                          <h6>.  GROUPS</h6>
+                        </div>
+                      </div><!--/col-md-4 -->
+
+                    </div><!-- /row --> 
+                      <div class="row mt">
+                    </div><!-- /row -->
+                    
+                    
+					<div class="row">
+					
+<!-- Create a post card -->
+                    <div class="row mt">
+            
+                <!-- Input Fields-->
+                <div class="col-lg-12 mb">
+                    <div class="form-panel">
+                          <form action="#" class="form-horizontal style-form">
+                              
+                              <div class="row">
+                                    <div class="col-md-12">
+                                    <textarea rows="1" class="form-control" placeholder="What's on your mind?"></textarea>
+                                        <div class="defult-style">
+                                            <br>
+                                            <div class="pull-left">
+                                                <button class="btn btn-theme"><i class="fa fa-smile-o"></i></button>
+                                                <button class="btn btn-theme"><i class="fa fa-twitter"></i></button>
+                                                <button class="btn btn-theme"><i class="fa fa-camera"></i></button>
+                                                <button class="btn btn-theme"><i class="fa fa-youtube-play"></i></button>
+                                            </div>
+                                            <div class="pull-right">
+                                            <button class="btn btn-theme">POST</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                          </form>
+                    </div><!-- /form-panel -->
+                </div><!-- /col-lg-12 -->
+            </div><!-- /row -->
+
+<!-- Column 1 -->
+
+          	            <!-- SHARED -->
+                        <div class="col-md-4 mb">
+                            <div class="instagram-panel pn">
+                                <iframe width="100%" height="250" scrolling="no" frameborder="no" src="//www.youtube.com/embed/eIZTMVNBjc4" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div><!-- /col-md-4 -->
+                        <!-- End Column 1 -->
+
+						<!-- TWITTER PANEL -->
+						<div class="col-md-4 mb">
+							<div class="twitter-panel pn">
+								<i class="fa fa-twitter fa-4x"></i>
+								<p>Our new school mascot is here! Take a look at these hilarious pictures!</p>
+								<p class="user">@LadyWoodHighschool</p>
+                                <p>December 10, 2014</p>
+							</div>
+						</div><!-- /col-md-4 -->
+						
+						<!-- SHARED -->
+                        <div class="col-md-4 mb">
+							<div class="instagram-panel pn">
+								<iframe width="100%" height="250" scrolling="no" frameborder="no" src="//www.youtube.com/embed/lKcZ551Ex4w" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div><!-- /col-md-4 -->
+                        <!-- End Column 1 -->
+						
+<!-- Column 2 -->
+
+						<!-- PHOTO PANEL -->
+                        <div class="col-md-4 mb">
+                        <div class="instagram-panel pn">
+							<i class="fa fa-camera fa-4x"></i>
+                            <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+                            <p>December 08, 2014</p>
+                            <button class="btn btn-small btn-theme04">View Photo</button>
+							</div>
+						</div><!-- /col-md-4 -->
+                        
+                        <!-- MESSAGE -->
+                        <div class="col-md-4 mb">
+                            <div class="content-panel pn">
+                                <div id="blog-bg">
+                                    <!--
+                                    div class="badge badge-popular">POPULAR</div
+                                    -->
+                                    <div class="blog-title">Title Goes Here</div>
+                                </div>
+                                <div class="blog-text">
+                                    <p>Lorem Ipsum is simply dummy text for a post that a teacher might post. 
+                                    <a href="#">Read More</a>
+                                    <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- /col-md-4-->
+
+                        <!-- TWITTER PANEL -->
+                        <div class="col-md-4 mb">
+                            <div class="twitter-panel pn">
+                                <i class="fa fa-twitter fa-4x"></i>
+                                <p>I tweeted this thing about some thing and people read it! #whocares</p>
+                                <p class="user">@LadyWoodHighschool</p>
+                                <p>December 06, 2014</p>
+                            </div>
+                        </div><!-- /col-md-4 -->
+
+                        <!-- End Column 2 -->
+       
+					</div><!-- /row -->	
+                  </div><!-- /col-lg-9 END SECTION MIDDLE -->
+                  
+                  
+      <!-- **********************************************************************************************************************************************************
+      RIGHT SIDEBAR CONTENT
+      *********************************************************************************************************************************************************** -->                  
+                  
+                  <div class="col-lg-3 ds">
+                    <!--COMPLETED ACTIONS DONUTS CHART-->
+                  	<div class="donut-main">
+						<h4>COMPLETED LESSONS</h4>
+						<canvas id="newchart" height="130" width="130"></canvas>
+						<script>
+							var doughnutData = [
+									{
+										value: 70,
+										color:"#4ECDC4"
+									},
+									{
+										value : 30,
+										color : "#fdfdfd"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
+						</script>
+                  	</div>
+                  
+                      <!--NEW EARNING STATS -->
+                      <div class="panel terques-chart">
+                          <div class="panel-body">
+                              <div class="chart">
+                                  <div class="centered">
+                                      <span>LESSON PROGRESS:</span>
+                                      <strong>70% COMPLETE</strong>
+                                  </div>
+                                  <br>
+                              </div>
+                          </div>
+                      </div>
+                      <!--new earning end-->
+                      
+                      <!-- RECENT ACTIVITIES SECTION -->
+                      <h4 class="centered mt">LESSONS TO BE COMPLETED</h4>
+                      <!-- First Activity -->
+                      <div class="desc">
+                        <div class="thumb">
+                          <img class="img-circle" src="/images/Lessons_halfsize_02.jpg" width="55px" height="55px" align="">
+                        </div>
+                      	<div class="details">
+                      		<p><muted>Due: Today</muted><br/>
+                      		   <a href="#">Test</a> Science Exam 203 Name<br/>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Second Activity -->
+                      <div class="desc">
+                        <div class="thumb">
+                          <img class="img-circle" src="/images/Lessons_halfsize_01.jpg" width="55px" height="55px" align="">
+                        </div>
+                      	<div class="details">
+                      		<p><muted>Due: Tomorrow</muted><br/>
+                      		   <a href="#">Assignments</a> English Research Paper Name<br/>
+                      		</p>
+                      	</div>
+                      </div>
+                      <!-- Third Activity -->
+                      <div class="desc">
+                        <div class="thumb">
+                          <img class="img-circle" src="/images/Lessons_halfsize_01.jpg" width="55px" height="55px" align="">
+                        </div>
+                      	<div class="details">
+                      		<p><muted>Due: Tomorrow</muted><br/>
+                      		   <a href="#">Assignment</a> Math Homework Name<br/>
+                      		</p>
+                      	</div>
+                      </div>
+                       <!-- Fourth Activity -->
+                      <div class="desc">
+                        <div class="thumb">
+                          <img class="img-circle" src="/images/Lessons_halfsize_03.jpg" width="55px" height="55px" align="">
+                        </div>
+                      	<div class="details">
+                      		<p><muted>Due: In 4 Days</muted><br/>
+                      		   <a href="#">Quiz</a> How Much Does A Snowflake Know Name<br/>
+                      		</p>
+                      	</div>
+                      </div>
+                      
+                        <!-- CALENDAR-->
+                        <div id="calendar" class="mb">
+                            <div class="panel green-panel no-margin">
+                                <div class="panel-body">
+                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+                                        <div class="arrow"></div>
+                                        <h3 class="popover-title" style="disadding: none;"></h3>
+                                        <div id="date-popover-content" class="popover-content"></div>
+                                    </div>
+                                    <div id="my-calendar"></div>
+                                </div>
+                            </div>
+                        </div><!-- / calendar -->
+                      
+                  </div><!-- /col-lg-3 -->
+              </div><!--/row -->
+          </section>
+      </section>
+
+      <!--main content end-->
+      
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery-1.8.3.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="/javascripts/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="/javascripts/jquery.scrollTo.min.js"></script>
+    <script src="/javascripts/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.sparkline.js"></script>
+
+
+    <!--common script for all pages-->
+    <script src="/javascripts/common-scripts.js"></script>
+    
+    <script type="text/javascript" src="/javascripts/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="/javascripts/gritter-conf.js"></script>
+
+    <!--script for this page-->
+    <script src="/javascripts/sparkline-chart.js"></script>    
+	<script src="/javascripts/zabuto_calendar.js"></script>	
+	
+	<script type="application/javascript">
+        $(document).ready(function () {
+            $("#date-popover").popover({html: true, trigger: "manual"});
+            $("#date-popover").hide();
+            $("#date-popover").click(function (e) {
+                $(this).hide();
+            });
+        
+            $("#my-calendar").zabuto_calendar({
+                action: function () {
+                    return myDateFunction(this.id, false);
+                },
+                action_nav: function () {
+                    return myNavFunction(this.id);
+                },
+                ajax: {
+                    url: "show_data.php?action=1",
+                    modal: true
+                },
+                legend: [
+                    {type: "text", label: "Special event", badge: "00"},
+                    {type: "block", label: "Regular event", }
+                ]
+            });
+        });
+        
+        
+        function myNavFunction(id) {
+            $("#date-popover").hide();
+            var nav = $("#" + id).data("navigation");
+            var to = $("#" + id).data("to");
+            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+        }
+    </script>
+  
+
+  </body>
+</html>
